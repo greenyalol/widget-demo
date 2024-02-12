@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <script type="module" src="./js/widget.js"></script>
+    <!-- <script type="module" src="./js/widget.js"></script> -->
     <title>User Default Website</title>
 </head>
 
 <body>
     <div id="below-article-widget"></div>
     <script type="module">
-        import { helloWorld } from "./js/widget.js"
-        helloWorld();
+        import Widget from "./js/widget.js"
+        const widget = new Widget({
+            container: "below-article-widget"
+        });
+        widget.render();
     </script>
 </body>
 
