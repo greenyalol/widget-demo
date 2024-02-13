@@ -1,3 +1,4 @@
+import { parseRedirectLink } from "./url-parser.js"
 // const adContentTypes = {
 //     organic: "organic",
 //     sponsored: "sponsored",
@@ -7,20 +8,31 @@
 
 // }
 
-class SuggestedAdItem {
+export class SuggestedAdItem {
 
     #mediaContent
     #caption
     #type
     #adSource
+    #description
+    #redirect
 
-    constructor(mediaContent, caption, type, adSource) {
-        this.#caption = caption;
-        this.#type = type;
-        this.#mediaContent = mediaContent;
-        this.#adSource = adSource;
+    constructor(recommendation) {
+        const {
+            origin,
+            thumbnail,
+            description,
+            url,
+            branding,
+            name } = recommendation;
+        this.#redirect = parseRedirectLink(url);
+        this.#caption = name;
+        this.#description = description;
+        this.#type = origin;
+        this.#mediaContent = thumbnail;
+        this.#adSource = branding;
     }
 
-    
+
 
 }
