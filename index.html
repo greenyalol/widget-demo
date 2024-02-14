@@ -1,25 +1,82 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <!-- <script type="module" src="./js/widget.js"></script> -->
-    <script type="module" src="./js/fetch.js"></script>
-    <script type="module" src="./js/url-parser.js"></script>
-    <title>User Default Website</title>
+     <script type="module" src="./js/widget.js"></script> -->
+<!-- <script type="module" src="./js/fetch.js"></script> -->
+<!-- <script type="module" src="./js/url-parser.js"></script> -->
+<!-- <script type="module" src="./js/frame-builder.js"></script> -->
+<!-- <title>User Default Website</title> -->
+<!-- </head> -->
+
+<!-- <body> -->
+<!-- <div class="user-container"> -->
+<!-- </div> -->
+<!-- </body> -->
+
+<!-- </html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <link rel="stylesheet" href="./style/style.css">
+
 </head>
 
 <body>
-    <div id="below-article-widget"></div>
-    <script type="module">
-        import Widget from "./js/widget.js"
-        const widget = new Widget({
-            container: "below-article-widget"
-        });
-        widget.render();
-    </script>
+    <header>
+        <h1>Welcome to User's Page</h1>
+    </header>
+
+    <aside>
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#article1">Article 1</a></li>
+            <li><a href="#article2">Article 2</a></li>
+            <li><a href="#article3">Article 3</a></li>
+        </ul>
+    </aside>
+
+    <div class="content">
+        <section id="article1" class="article">
+            <h2>Article 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et nunc et ipsum. Integer gravida risus sit
+                amet justo rhoncus, ac rutrum purus fermentum. Nullam id arcu ac libero bibendum imperdiet in vel leo.
+            </p>
+        </section>
+
+        <section id="article2" class="article">
+            <h2>Article 2</h2>
+            <p>Nullam feugiat felis id enim dignissim, ut sollicitudin arcu blandit. Vestibulum nec eleifend ligula,
+                eget mattis massa. Sed ultricies augue ac elit laoreet, non feugiat arcu volutpat. Aliquam ut erat in
+                felis gravida tempor.</p>
+                <div id="below-article-widget"></div>
+
+        </section>
+
+        <section id="article3" class="article">
+            <h2>Article 3</h2>
+            <p>Vivamus bibendum turpis ut justo gravida, eget feugiat arcu efficitur. Aliquam erat volutpat. Sed rutrum
+                vestibulum ex, eu tincidunt tortor pretium at. Nam vel enim vel nibh posuere convallis non vel massa.
+            </p>
+        </section>
+        <script type="module">
+            import Widget from "./js/widget.js"
+            await Widget.render({
+                container: "below-article-widget"
+            });
+            // widget.render();
+        </script>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,118 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.media-container img,
+.media-container iframe,
+.media-container video,
+.media-container embed,
+.media-container svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h5, h3 {
+    margin: 0;
+}
+
+.ad-widget-header {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    /* top: 0;  */
+    /* left: -10px; */
+    /* top: -10px; */
+}
+
+.ad-widget-header img {
+    position: relative;
+    height: 100%;
+}
+
+.ad-branding-container {
+    margin-top: auto;
+    /* margin-left: auto; */
+    color: #B9BBB6;
+}
+
+.ad-caption-container {
+    color: #777B7E;
+    ;
+}
+
+.media-container {
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 200px;
+}
+
+#below-article-widget {
+    /* max-width: 500px; */
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.ad-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.6px 1.1px 1.1px hsl(0deg 0% 0% / 0.48);
+    gap: 5px;
+    /* justify-content: space-between; */
+    padding: 10px;
+    background-color: #FFF;
+}
+
+.ad-card:hover {
+    cursor: pointer;
+}
+
+.ad-widget-container {
+    /* max-width: 1290px; */
+    max-width: 960px;
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: #F8F8F8;
+    /* padding: 20px; */
+}
+
+.user-container {
+    /* width: 100%; */
+}
+
+/* .below-article-widget {
+    width: 100%;
+} */
+
+.ad-cards-wrapper {
+    display: grid;
+    gap: 10px;
+    padding: 0 10px 10px 10px;
+    /* grid-template-rows: auto ; */
+}
+
+@media screen and (min-width: 1280px) {
+    .ad-cards-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    .ad-cards-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .ad-cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 480px) {
+    .ad-cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
