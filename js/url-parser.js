@@ -1,5 +1,5 @@
 
-function decodeString(string) {
+export function decodeString(string) {
     try {
         const decodedString = decodeURIComponent(string);
         return decodedString;
@@ -11,9 +11,13 @@ function decodeString(string) {
 
 export function parseRedirectLink(url) {
     const decodedString = decodeString(url);
-    const urlParams = new URL(url).searchParams;
+    const urlParams = new URL(decodedString).searchParams;
     const redirectLink = urlParams.get('redir');
-    return redirectLink;
+    return redirectLink ? redirectLink : urlParams;
+}
+
+export function parseExtension(url) {
+    return url.match(/\.\w{2,4}$/);
 }
 //function
 // function urlBuilder(url) {
