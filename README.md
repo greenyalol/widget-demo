@@ -5,8 +5,9 @@ Implementing an embedded widget for ad recommendations.
 2. npm i
 3. npx webpack
 
-The result - module <code>widget.js</code> in **dist** directory. Put this script inside the user working directory. After this execute the render() method with container property. Example:
+The result is the module <code>widget.js</code> located in the **dist** directory. Place this script inside the user's working directory. After that, execute the render() method with the container property. For example:
 
+### User website
 ```
   <body>
     <div id="widget-container"></div>
@@ -19,5 +20,5 @@ The result - module <code>widget.js</code> in **dist** directory. Put this scrip
   </body>
 ```
 
-The ID of the < div> element will match the value defined in the container property.
+The ID of the `<div>` element will match the value defined in the container property.
 If these do not match, the widget will not render.
