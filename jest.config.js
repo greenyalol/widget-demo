@@ -1,1 +1,5 @@
-export default { transform: {} }
+module.exports = {
+    transform: {
+        "^.+\\.js?$": "babel-jest"
+    },
+};

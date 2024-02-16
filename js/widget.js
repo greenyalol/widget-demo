@@ -1,6 +1,6 @@
 import { SuggestedAdItem } from "./recommendation.js"
 import { getRecommendationsList, GET_REQUEST_API_URL, TABOOLA_ICON } from "./fetch.js"
-// import '../style/widget-style.css'; //need for bundle css in webpack
+import '../style/widget-style.css'; //need for bundle css in webpack
 
 export default class Widget {
 
