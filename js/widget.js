@@ -1,7 +1,6 @@
 import { SuggestedAdItem } from "./recommendation.js"
-import { getRecommendationsList, GET_REQUEST_API_URL } from "./fetch.js"
-const TABOOLA_ICON = `https://www.taboola.com//wp-content/uploads/2022/10/icon-blue.png`
-const AD_CHOICES = `https://youradchoices.com/DAA_style/YAC/icon.png`
+import { getRecommendationsList, GET_REQUEST_API_URL, TABOOLA_ICON } from "./fetch.js"
+// import '../style/widget-style.css'; //need for bundle css in webpack
 
 export default class Widget {
 
@@ -13,18 +12,19 @@ export default class Widget {
 
     constructor({ container }) {
         this.#widgetContainer = document.querySelector(`#${container}`);
+        this.#widgetContainer.attributeStyleMap.set('display', 'flex');
+        this.#widgetContainer.attributeStyleMap.set('justify-content', 'center');
     }
 
     async #initialize() {
         const suggestionsList = await getRecommendationsList(GET_REQUEST_API_URL);
-        if (suggestionsList) {
+        if (suggestionsList.length !== 0) {
             this.#recommendationsCollection = suggestionsList.list.map((suggestion) => {
                 return new SuggestedAdItem(suggestion);
             });
         } else {
             this.#recommendationsCollection = [];
         }
-        // console.log(this.#recommendationsCollection);
     }
 
     get recommendationsCollection() {
@@ -59,6 +59,4 @@ export default class Widget {
         widget.widgetContainer.append(adWidgetContainer);
         return widget;
     }
-
-
 }
