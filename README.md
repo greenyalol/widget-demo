@@ -1,5 +1,8 @@
 # Test task
-Implementing an embedded widget for ad recommendations. The widget supports many media content extensions: '.png', '.pdf', '.svg', '.jpg', '.jpeg', '.mp4', '.avi', '.gif', '.htm', '.html', '.mpeg', '.pptx', '.ppt', '.3gp', '.webm', '.webp'.
+Implementing an embedded widget for ad recommendations. The widget supports many media content extensions: 
+```
+'.png', '.pdf', '.svg', '.jpg', '.jpeg', '.mp4', '.avi', '.gif', '.htm', '.html', '.mpeg', '.pptx', '.ppt', '.3gp', '.webm', '.webp'
+```
 ## Instructions for running
 1. git clone https://github.com/greenyalol/widget-demo.git
 2. cd widget-demo
