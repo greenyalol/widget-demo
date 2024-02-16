@@ -29,6 +29,6 @@ export function getMediaType(ext) {
         const mediaType = mimeType.split('/').splice(0, 1);
         return mediaType;
     } else {
-        return new Error('No such extension');
+        throw new Error('No such extension');
     }
 }
