@@ -46,6 +46,7 @@ h3 {
     gap: 5px;
     padding: 10px;
     background-color: #FFF;
+    text-overflow: ellipsis;
 }
 
 .ad-card:hover {
@@ -68,5 +69,12 @@ h3 {
 @media screen and (min-width: 1280px) {
     .ad-cards-wrapper {
         grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+}
+
+
+@media screen and (min-width: 0) and (max-width: 480px) {
+    .ad-cards-wrapper {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
     }
 }

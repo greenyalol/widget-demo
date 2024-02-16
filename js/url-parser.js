@@ -4,7 +4,7 @@ export function decodeString(string) {
         const decodedString = decodeURIComponent(string);
         return decodedString;
     } catch (err) {
-        console.log(err);
+        return null;
     }
 }
 
