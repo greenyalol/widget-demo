@@ -22,3 +22,8 @@ The result is the module <code>widget.js</code> located in the **dist** director
 
 The ID of the `<div>` element will match the value defined in the container property.
 If these do not match, the widget will not render.
+
+![image](https://github.com/greenyalol/widget-demo/assets/19665630/ab5a26c7-bf3a-46d9-8e5e-effeace8dc41)
+![image](https://github.com/greenyalol/widget-demo/assets/19665630/d02c60a5-098c-4412-b7c5-8d6509e97b94)
+![image](https://github.com/greenyalol/widget-demo/assets/19665630/134385b1-79e1-4b7a-bbe9-d78372441237)
+
