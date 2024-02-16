@@ -1,7 +1,7 @@
 # Test task
 Implementing an embedded widget for ad recommendations.
 ## Instructions for running
-1. git clone https://github.com/greenyalol/widget-demo.git)https://github.com/greenyalol/widget-demo.git
+1. git clone https://github.com/greenyalol/widget-demo.git
 2. npm i
 3. npx webpack
 
